@@ -4,28 +4,6 @@
     <title>JustStream it</title>
     <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
-    <script>
-        const apiUrl = 'http://localhost:8000/api/v1/titles/9';
-
-        fetch(apiUrl)
-          .then(response => response.json())
-          .then(data => {
-            // Récupérer le titre et l'URL de l'image du film
-            const titreVideo = data.title;
-            const urlImage = data.image_url;
-            
-            // Afficher le titre dans l'élément HTML avec l'ID "titreVideo"
-            const titreVideoElement = document.getElementById("titreVideo");
-            titreVideoElement.textContent = titreVideo;
-            
-            // Afficher l'image dans l'élément HTML avec l'ID "imageFilm"
-            const imageFilmElement = document.getElementById("imageFilm");
-            imageFilmElement.src = urlImage;
-          })
-          .catch(error => {
-            console.error(error);
-          });
-    </script>
 </head>
 <body>
     <header>
@@ -37,26 +15,23 @@
     </header>
 
     <div class="video-container">
-      <img id="imageFilm" src="" alt="Image du film">
-      <div class="video-title" id="titreVideo">Titre de la vidéo</div>
-      <a class="play-button" href="#">Play</a>
+        <div id="video-title" class="video-title">Titre de la vidéo</div>
+        <img id="video-image" class="video-image" src="" alt="Video Image">
+        <a class="play-button" href="#">Play</a>
     </div>
-    
 
     <h1 class="title">Films les mieux notés</h1>
     <div class="carousel">
-        <img src="https://rb.gy/ac1jm" alt="Image 1">
-        <img src="https://rb.gy/ac1jm" alt="Image 2">
-        <img src="https://rb.gy/ac1jm" alt="Image 3">
-        <img src="https://rb.gy/ac1jm" alt="Image 4">
+      <div id="action-carousel-container" class="action-carousel-container"></div>
+      <button id="prev-button" class="carousel-button prev-button">&lt;</button>
+      <button id="next-button" class="carousel-button next-button">&gt;</button>
     </div>
 
-    <h1 class="title">Catégorie 1</h1>
-    <div class="carousel">
-        <img src="https://rb.gy/ac1jm" alt="Image 1">
-        <img src="https://rb.gy/ac1jm" alt="Image 2">
-        <img src="https://rb.gy/ac1jm" alt="Image 3">
-        <img src="https://rb.gy/ac1jm" alt="Image 4">
+    <h1 class="title">Action</h1>
+    <div id="action-carousel-container" class="carousel">
+      <div id="carousel-container" class="carousel-container"></div>
+      <button id="prev-button" class="carousel-button prev-button">&lt;</button>
+      <button id="next-button" class="carousel-button next-button">&gt;</button>
     </div>
 
     <h1 class="title">Catégorie 2</h1>
@@ -66,3 +41,15 @@
         <img src="https://rb.gy/ac1jm" alt="Image 7">
         <img src="https://rb.gy/ac1jm" alt="Image 8">
     </div>
+
+    <h1 class="title">Catégorie 3</h1>
+    <div class="carousel">
+        <img src="https://rb.gy/ac1jm" alt="Image 9">
+        <img src="https://rb.gy/ac1jm" alt="Image 10">
+        <img src="https://rb.gy/ac1jm" alt="Image 11">
+        <img src="https://rb.gy/ac1jm" alt="Image 12">
+    </div>
+
+    <script src="main.js" defer></script>
+</body>
+</html>
