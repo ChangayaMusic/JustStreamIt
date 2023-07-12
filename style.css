@@ -37,16 +37,7 @@ header {
     overflow: hidden;
 }
 
-.action-carousel-container{
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-.action-carousel-container img {
-    width: 25%;
-    height: 300px;
-    object-fit: cover;
-    margin: 10px;
-}
+
 .carousel {
   position: relative;
   overflow: hidden;
@@ -55,10 +46,15 @@ header {
 
 .carousel-container {
     
-  display: flex;
-  transition: transform 0.5s ease-in-out;
+  width: 100%; /* Set the container width to 100% of the parent element */
+  overflow: hidden; /* Hide any content that exceeds the container's width */
+  display: flex; /* Use flexbox to align images horizontally */
 }
-
+.carousel-container img {
+  flex: 0 0 auto; 
+  width: 20%; 
+  object-fit: cover; /* Maintain aspect ratio and fill the available space */
+  }
 .carousel-button {
   position: absolute;
   top: 50%;
