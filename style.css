@@ -45,16 +45,17 @@ header {
 }
 
 .carousel-container {
-    
   width: 100%; /* Set the container width to 100% of the parent element */
   overflow: hidden; /* Hide any content that exceeds the container's width */
   display: flex; /* Use flexbox to align images horizontally */
 }
+
 .carousel-container img {
-  flex: 0 0 auto; 
-  width: 20%; 
+  flex: 0 0 auto;
+  width: 15%; /* Adjust the width percentage to fit more images */
   object-fit: cover; /* Maintain aspect ratio and fill the available space */
-  }
+}
+
 .carousel-button {
   position: absolute;
   top: 50%;
