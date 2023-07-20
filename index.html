@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JustStream it</title>
     <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
@@ -21,35 +24,24 @@
     </div>
 
     <h1 class="title">Films les mieux notés</h1>
-    <div class="carousel">
-      <div id="carousel-container" class="carousel-container"></div>
-      <button id="prev-button-ranked" class="carousel-button prev-button">&lt;</button>
-      <button id="next-button-ranked" class="carousel-button next-button">&gt;</button>
-    </div>
+<div class="carousel top-rated-carousel">
+  <div class="carousel-container" id="top-rated-carousel-container"></div>
+  <div class="navigation-indicators">
+  
+  </div>
+</div>
 
-    <h1 class="title">Action</h1>
-    <div class="carousel">
-      <div id="action-carousel-container" class="carousel-container"></div>
-      <button id="prev-button-action" class="carousel-button prev-button">&lt;</button>
-      <button id="next-button-action" class="carousel-button next-button">&gt;</button>
-    </div>
+<h1 class="title">Films d'action</h1>
+<div class="carousel action-carousel">
+  <div class="carousel-container" id="action-carousel-container"></div>
+  <div class="navigation-indicators">
+   
+  </div>
+</div>
 
-    <h1 class="title">Catégorie 2</h1>
-    <div class="carousel">
-        <img src="https://rb.gy/ac1jm" alt="Image 5">
-        <img src="https://rb.gy/ac1jm" alt="Image 6">
-        <img src="https://rb.gy/ac1jm" alt="Image 7">
-        <img src="https://rb.gy/ac1jm" alt="Image 8">
-    </div>
-
-    <h1 class="title">Catégorie 3</h1>
-    <div class="carousel">
-        <img src="https://rb.gy/ac1jm" alt="Image 9">
-        <img src="https://rb.gy/ac1jm" alt="Image 10">
-        <img src="https://rb.gy/ac1jm" alt="Image 11">
-        <img src="https://rb.gy/ac1jm" alt="Image 12">
-    </div>
-
+    
     <script src="main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js/glider.min.js"></script>
+
 </body>
 </html>

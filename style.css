@@ -1,3 +1,26 @@
+HTML SCSSResult Skip Results Iframe
+EDIT ON
+
+$itemGrow: 1.2;
+$duration: 250ms;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #000;
+  font-family: Arial;
+}
+
+h1 {
+  color: red;
+  text-align: center;
+}
+
+
+
 body, h1, h2, h3, h4, h5, h6, p, a {
     font-family: 'Rajdhani', sans-serif;
     background-color: #000000;
@@ -36,49 +59,6 @@ header {
     max-width: 100%;
     overflow: hidden;
 }
-
-
-.carousel {
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 20px;
-}
-
-.carousel-container {
-  width: 100%; /* Set the container width to 100% of the parent element */
-  overflow: hidden; /* Hide any content that exceeds the container's width */
-  display: flex; /* Use flexbox to align images horizontally */
-}
-
-.carousel-container img {
-  flex: 0 0 auto;
-  width: 15%; /* Adjust the width percentage to fit more images */
-  object-fit: cover; /* Maintain aspect ratio and fill the available space */
-}
-
-.carousel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  font-size: 20px;
-  cursor: pointer;
-  z-index: 1;
-}
-
-.prev-button {
-  left: 10px;
-}
-
-.next-button {
-  right: 10px;
-}
-
 
 
 .title {
@@ -129,4 +109,41 @@ header {
     position: absolute;
     top: calc(50% + 40px); 
     left: 5%;
+}
+.carousel {
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 10px;
+}
+
+.media-element {
+  flex: 0 0 auto;
+}
+
+.navigation-indicators {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.previous,
+.next {
+  padding: 5px 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.previous:hover,
+.next:hover {
+  background-color: #555;
 }
