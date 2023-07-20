@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const videoImageElement = document.getElementById('video-image');
   const topRatedCarouselContainer = document.getElementById('top-rated-carousel-container');
   const actionCarouselContainer = document.getElementById('action-carousel-container');
+  const horrorCarouselContainer = document.getElementById('horror-carousel-container');
+  const adventureCarouselContainer = document.getElementById('adventure-carousel-container');
 
   function fetchHighestRatedMovie() {
     fetch('http://localhost:8000/api/v1/titles/?sort_by=-imdb_score')
@@ -67,8 +69,6 @@ document.addEventListener('DOMContentLoaded', function () {
   fetchHighestRatedMovie();
   fetchMovies('http://localhost:8000/api/v1/titles/?imdb_score_min=8&sort_by=-imdb_score', topRatedCarouselContainer);
   fetchMovies('http://localhost:8000/api/v1/titles/?genre=Action&sort_by=-imdb_score', actionCarouselContainer);
-
-  // Add carousel navigation event listeners
-  addCarouselNavigation('top-rated-carousel');
-  addCarouselNavigation('action-carousel');
+  fetchMovies('http://localhost:8000/api/v1/titles/?year=&min_year=&max_year=&imdb_score=&imdb_score_min=&imdb_score_max=&title=&title_contains=&genre=horror&genre_contains=&sort_by=&director=&director_contains=&writer=&writer_contains=&actor=&actor_contains=&country=&country_contains=&lang=&lang_contains=&company=&company_contains=&rating=&rating_contains=', horrorCarouselContainer);
+  fetchMovies('http://localhost:8000/api/v1/titles/?year=&min_year=&max_year=&imdb_score=&imdb_score_min=&imdb_score_max=&title=&title_contains=&genre=adventure&genre_contains=&sort_by=&director=&director_contains=&writer=&writer_contains=&actor=&actor_contains=&country=&country_contains=&lang=&lang_contains=&company=&company_contains=&rating=&rating_contains=', adventureCarouselContainer);
 });
