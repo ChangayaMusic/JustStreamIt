@@ -72,3 +72,49 @@ document.addEventListener('DOMContentLoaded', function () {
   fetchMovies('http://localhost:8000/api/v1/titles/?year=&min_year=&max_year=&imdb_score=&imdb_score_min=&imdb_score_max=&title=&title_contains=&genre=horror&genre_contains=&sort_by=&director=&director_contains=&writer=&writer_contains=&actor=&actor_contains=&country=&country_contains=&lang=&lang_contains=&company=&company_contains=&rating=&rating_contains=', horrorCarouselContainer);
   fetchMovies('http://localhost:8000/api/v1/titles/?year=&min_year=&max_year=&imdb_score=&imdb_score_min=&imdb_score_max=&title=&title_contains=&genre=adventure&genre_contains=&sort_by=&director=&director_contains=&writer=&writer_contains=&actor=&actor_contains=&country=&country_contains=&lang=&lang_contains=&company=&company_contains=&rating=&rating_contains=', adventureCarouselContainer);
 });
+// Helper function to move the carousel left (previous)
+function moveCarouselPrev(carouselContainer) {
+  const carousel = carouselContainer.querySelector('.carousel-container');
+  const scrollAmount = carousel.scrollWidth / 3;
+  carousel.scrollLeft -= scrollAmount;
+}
+
+// Helper function to move the carousel right (next)
+function moveCarouselNext(carouselContainer) {
+  const carousel = carouselContainer.querySelector('.carousel-container');
+  const scrollAmount = carousel.scrollWidth / 3;
+  carousel.scrollLeft += scrollAmount;
+}
+
+// Add event listeners for the "Prev" and "Next" buttons
+document.querySelector('.top-rated-carousel .glider-prev').addEventListener('click', function () {
+  moveCarouselPrev(document.querySelector('.top-rated-carousel'));
+});
+
+document.querySelector('.top-rated-carousel .glider-next').addEventListener('click', function () {
+  moveCarouselNext(document.querySelector('.top-rated-carousel'));
+});
+
+document.querySelector('.action-carousel .glider-prev').addEventListener('click', function () {
+  moveCarouselPrev(document.querySelector('.action-carousel'));
+});
+
+document.querySelector('.action-carousel .glider-next').addEventListener('click', function () {
+  moveCarouselNext(document.querySelector('.action-carousel'));
+});
+
+document.querySelector('.horror-carousel .glider-prev').addEventListener('click', function () {
+  moveCarouselPrev(document.querySelector('.horror-carousel'));
+});
+
+document.querySelector('.horror-carousel .glider-next').addEventListener('click', function () {
+  moveCarouselNext(document.querySelector('.horror-carousel'));
+});
+
+document.querySelector('.adventure-carousel .glider-prev').addEventListener('click', function () {
+  moveCarouselPrev(document.querySelector('.adventure-carousel'));
+});
+
+document.querySelector('.adventure-carousel .glider-next').addEventListener('click', function () {
+  moveCarouselNext(document.querySelector('.adventure-carousel'));
+});

@@ -12,10 +12,11 @@
     <header>
         <img class="logo" src="https://user.oc-static.com/upload/2020/09/18/16004298163529_P5.png" alt="Logo">
         <nav class="nav-links">
-            <a href="#">Accueil</a>
-            <a href="#">Catégorie</a>
+          <a href="#top">Accueil</a>
+            <a href="#categories">Catégorie</a>
         </nav>
     </header>
+    <div id="top"></div>
 
     <div class="video-container">
         <div id="video-title" class="video-title">Titre de la vidéo</div>
@@ -24,38 +25,40 @@
     </div>
 
     <h1 class="title">Films les mieux notés</h1>
-<div class="carousel top-rated-carousel">
-  <div class="carousel-container" id="top-rated-carousel-container"></div>
-  <div class="navigation-indicators">
-  
-  </div>
-</div>
+    
+    <div class="carousel top-rated-carousel">
+        
+        <div class="carousel-container" id="top-rated-carousel-container"></div>
+        <button class="glider-prev"></button>
+        <button class="glider-next"></button>
+    </div>
+    <div id="categories"></div>
+    <h1 class="title">Films d'action</h1>
+    <div class="carousel action-carousel">
+       
+        <div class="carousel-container" id="action-carousel-container"></div>
+        <button class="glider-prev"></button>
+        <button class="glider-next"> na</button>
+    </div>
 
-<h1 class="title">Films d'action</h1>
-<div class="carousel action-carousel">
-  <div class="carousel-container" id="action-carousel-container"></div>
-  <div class="navigation-indicators">
-   
-  </div>
-</div>
+    <h1 class="title">Films d'horreur</h1>
+    <div class="carousel horror-carousel">
+     
+        <div class="carousel-container" id="horror-carousel-container"></div>
+        <button class="glider-prev"></button>
+        <button class="glider-next"></button>
+    </div>
 
-<h1 class="title">Films d'horreur</h1>
-<div class="carousel horror-carousel">
-  <div class="carousel-container" id="horror-carousel-container"></div>
-  <div class="navigation-indicators">
-   
-  </div>
-</div>
+    <h1 class="title">Films d'aventure</h1>
+    <div class="carousel adventure-carousel">
+        
+        <div class="carousel-container" id="adventure-carousel-container"></div>
+        <button class="glider-prev"></button>
+        <button class="glider-next"></button>
+    </div>
 
-<h1 class="title">Films d'aventure</h1>
-<div class="carousel adventure-carousel">
-  <div class="carousel-container" id="adventure-carousel-container"></div>
-  <div class="navigation-indicators">
-   
-  </div>
-</div>
     <script src="main.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/glider-js/glider.min.js"></script>
+   
 
 </body>
 </html>
