@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JustStream it</title>
     <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
@@ -11,24 +14,41 @@
     <header>
         <img class="logo" src="https://user.oc-static.com/upload/2020/09/18/16004298163529_P5.png" alt="Logo">
         <nav class="nav-links">
+<<<<<<< HEAD
             <a href="#">Accueil</a>
             <a href="#firstCategory">Catégorie</a>
+=======
+          <a href="#top">Accueil</a>
+            <a href="#categories">Catégorie</a>
+>>>>>>> a1ebf2918d1c61875c331313d001a0dd0f18beeb
         </nav>
     </header>
+    <div id="top"></div>
 
     <div class="video-container">
-        <div class="video-title">Titre de la vidéo</div>
+        <div id="video-title" class="video-title">Titre de la vidéo</div>
+        <img id="video-image" class="video-image" src="" alt="Video Image">
         <a class="play-button" href="#">Play</a>
     </div>
 
     <h1 class="title">Films les mieux notés</h1>
-  <div class="carousel">
-    <img src="https://rb.gy/ac1jm" alt="Image 1">
-    <img src="https://rb.gy/ac1jm" alt="Image 2">
-    <img src="https://rb.gy/ac1jm" alt="Image 3">
-    <img src="https://rb.gy/ac1jm" alt="Image 4">
-  </div>
+    
+    <div class="carousel top-rated-carousel">
+        
+        <div class="carousel-container" id="top-rated-carousel-container"></div>
+        <button class="glider-prev"></button>
+        <button class="glider-next"></button>
+    </div>
+    <div id="categories"></div>
+    <h1 class="title">Films d'action</h1>
+    <div class="carousel action-carousel">
+       
+        <div class="carousel-container" id="action-carousel-container"></div>
+        <button class="glider-prev"></button>
+        <button class="glider-next"> na</button>
+    </div>
 
+<<<<<<< HEAD
   <h1 class="title" id="firstCategory">Catégorie 1</h1>
   <div class="carousel">
     <img src="https://rb.gy/ac1jm" alt="Image 1">
@@ -36,15 +56,25 @@
     <img src="https://rb.gy/ac1jm" alt="Image 3">
     <img src="https://rb.gy/ac1jm" alt="Image 4">
   </div>
+=======
+    <h1 class="title">Films d'horreur</h1>
+    <div class="carousel horror-carousel">
+     
+        <div class="carousel-container" id="horror-carousel-container"></div>
+        <button class="glider-prev"></button>
+        <button class="glider-next"></button>
+    </div>
+>>>>>>> a1ebf2918d1c61875c331313d001a0dd0f18beeb
 
-  <h1 class="title">Catégorie 2</h1>
-  <div class="carousel">
-    <img src="https://rb.gy/ac1jm" alt="Image 5">
-    <img src="https://rb.gy/ac1jm" alt="Image 6">
-    <img src="https://rb.gy/ac1jm" alt="Image 7">
-    <img src="https://rb.gy/ac1jm" alt="Image 8">
-  </div>
+    <h1 class="title">Films d'aventure</h1>
+    <div class="carousel adventure-carousel">
+        
+        <div class="carousel-container" id="adventure-carousel-container"></div>
+        <button class="glider-prev"></button>
+        <button class="glider-next"></button>
+    </div>
 
+<<<<<<< HEAD
   <h1 class="title">Catégorie 3</h1>
   <div class="carousel">
     <img src="https://rb.gy/ac1jm" alt="Image 9">
@@ -53,5 +83,10 @@
     <img src="https://rb.gy/ac1jm" alt="Image 12">
   </div>
   <div class="container-div"></div>
+=======
+    <script src="main.js" defer></script>
+   
+
+>>>>>>> a1ebf2918d1c61875c331313d001a0dd0f18beeb
 </body>
 </html>
