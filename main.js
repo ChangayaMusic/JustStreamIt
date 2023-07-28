@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Check if the required properties exist in the movieDetails object
       const description = movieDetails.description || 'Description not available';
       const year = movieDetails.year || 'Year not available';
-      const genres = movieDetails.genre ? movieDetails.genre.join(', ') : 'Genres not available';
+      const genres = movieDetails.genres ? movieDetails.genres.join(', ') : 'Genres not available';
       const votes = movieDetails.votes || 'Votes not available';
       const imdbScore = movieDetails.imdb_score || 'IMDb Score not available';
       const directors = movieDetails.directors ? movieDetails.directors.join(', ') : 'Directors not available';
@@ -154,7 +154,10 @@ function moveCarouselNext(carouselContainer) {
   const scrollAmount = carousel.scrollWidth / 3;
   carousel.scrollLeft += scrollAmount;
 }
-
+function closeModal() {
+  const modal = document.getElementById('movieModal');
+  modal.style.display = 'none';
+}
 // Add event listeners for the "Prev" and "Next" buttons
 document.querySelector('.top-rated-carousel .glider-prev').addEventListener('click', function () {
   moveCarouselPrev(document.querySelector('.top-rated-carousel'));
@@ -187,3 +190,8 @@ document.querySelector('.adventure-carousel .glider-prev').addEventListener('cli
 document.querySelector('.adventure-carousel .glider-next').addEventListener('click', function () {
   moveCarouselNext(document.querySelector('.adventure-carousel'));
 });
+document.getElementById('modalCloseBtn').addEventListener('click', function () {
+  closeModal();
+});
+
+
