@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
       })
       .then(data => {
         if (data && data.results && data.results.length > 0) {
-          // Assuming the first movie in the results is the closest match
+          
           const movieDetails = data.results[0];
           return movieDetails;
         } else {
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
       })
       .catch(error => {
         console.error('Error fetching movie details:', error);
-        throw error; // Rethrow the error to be caught in the calling function
+        throw error; 
       });
   }
 
@@ -60,23 +60,27 @@ document.addEventListener('DOMContentLoaded', function () {
     .then(movieDetails => {
       console.log('API Response:', movieDetails);
 
-      // Check if the required properties exist in the movieDetails object
       const description = movieDetails.description || 'Description not available';
       const year = movieDetails.year || 'Year not available';
       const genres = movieDetails.genres ? movieDetails.genres.join(', ') : 'Genres not available';
-      const votes = movieDetails.votes || 'Votes not available';
       const imdbScore = movieDetails.imdb_score || 'IMDb Score not available';
       const directors = movieDetails.directors ? movieDetails.directors.join(', ') : 'Directors not available';
       const actors = movieDetails.actors ? movieDetails.actors.join(', ') : 'Actors not available';
-
+      const worldwideGrossIncome = movieDetails.worldwide_gross_income || 'Worldwide Gross Income not available';
+      const countries = movieDetails.countries ? movieDetails.countries.join(', ') : 'Countries not available';
+      const duration = movieDetails.duration || 'Duration not available';
+     
       modalDescription.innerHTML = `
         <p>Description: ${description}</p>
         <p>Year: ${year}</p>
         <p>Genres: ${genres}</p>
-        <p>Votes: ${votes}</p>
+      
         <p>IMDb Score: ${imdbScore}</p>
         <p>Directors: ${directors}</p>
         <p>Actors: ${actors}</p>
+        <p>Worldwide Gross Income: ${worldwideGrossIncome}</p>
+        <p>Countries: ${countries}</p>
+        <p>Duration: ${duration} minutes</p>
       `;
 
       modal.style.display = 'block';
