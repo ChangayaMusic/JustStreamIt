@@ -148,14 +148,14 @@ document.addEventListener('DOMContentLoaded', function () {
 // Helper function to move the carousel left (previous)
 function moveCarouselPrev(carouselContainer) {
   const carousel = carouselContainer.querySelector('.carousel-container');
-  const scrollAmount = carousel.scrollWidth / 3;
+  const scrollAmount = carousel.scrollWidth / 2;
   carousel.scrollLeft -= scrollAmount;
 }
 
 // Helper function to move the carousel right (next)
 function moveCarouselNext(carouselContainer) {
   const carousel = carouselContainer.querySelector('.carousel-container');
-  const scrollAmount = carousel.scrollWidth / 3;
+  const scrollAmount = carousel.scrollWidth / 2;
   carousel.scrollLeft += scrollAmount;
 }
 function closeModal() {
