@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   }
 
-  function fetchMovieDetailsByTitle(movieTitle) {
-    const encodedTitle = encodeURIComponent(movieTitle);
-    const url = `http://localhost:8000/api/v1/titles/?title_contains=${encodedTitle}`;
+  function fetchMovieDetailsByTitle(movie) {
+    let idImage = movie.id
+    const url = `http://localhost:8000/api/v1/titles/${idImage}`;
 
     return fetch(url)
       .then(response => {
@@ -37,12 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return response.json();
       })
       .then(data => {
-        if (data && data.results && data.results.length > 0) {
-          const movieDetails = data.results[0];
-          return movieDetails;
-        } else {
-          throw new Error('Movie not found');
-        }
+        return data;
       })
       .catch(error => {
         console.error('Error fetching movie details:', error);
@@ -59,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
     modalTitle.textContent = movie.title;
     modalImage.src = movie.image_url;
 
-    fetchMovieDetailsByTitle(movie.title)
+    fetchMovieDetailsByTitle(movie)
       .then(movieDetails => {
         console.log('API Response:', movieDetails);
 
@@ -94,6 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function closeModal() {
+    console.log("Close modal")
     const modal = document.getElementById('movieModal');
     modal.style.display = 'none';
   }
@@ -112,6 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const imageElement = document.createElement('img');
             imageElement.src = imageUrl;
             imageElement.alt = altText;
+            imageElement.id = `image-${movie.id}`
 
             // Add the onerror event handler to handle image loading errors
             imageElement.onerror = function () {

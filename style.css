@@ -189,7 +189,6 @@ header {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 9999;
-  display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
 }
