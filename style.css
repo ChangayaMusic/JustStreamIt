@@ -195,8 +195,6 @@ header {
 
 .modal-content {
   border-radius: 10px;
-  max-width: auto;
-  max-height: auto;
   overflow: auto;
   z-index: 10000;
   background-color: rgba(0, 0, 0, 0.8);
@@ -205,14 +203,14 @@ header {
   margin: 50px;
 }
 
+
 .modal-image-container {
   flex: 1;
-  max-width: 300px;
 }
 
 .modal-image-container img {
   width: 100%;
-  height: auto;
+  height: auto; /* Automatically adjust the height based on the image's aspect ratio */
   object-fit: cover;
   border-radius: 10px;
 }
@@ -223,6 +221,7 @@ header {
   margin-left: 50px;
   text-align: left;
 }
+
 .close {
   position: absolute;
   top: 10px;
